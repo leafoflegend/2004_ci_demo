@@ -1,0 +1,10 @@
+dist: trusty
+language: node_js
+node_js:
+  - '12'
+script:
+  - npm run lint
+notifications:
+  email:
+    on_failure: always
+    on_success: always
