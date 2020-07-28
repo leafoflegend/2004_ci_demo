@@ -31,10 +31,16 @@ const sync = async () => {
 
     throw e;
   }
-}
+};
 
 app.use(express.static(PUBLIC_PATH));
 app.use(express.static(DIST_PATH));
+
+app.get('/api/health', (req, res) => {
+  res.send({
+    message: 'I am a healthy little server.',
+  });
+});
 
 const startApplication = async () => {
   try {
@@ -49,6 +55,6 @@ const startApplication = async () => {
 
     throw e;
   }
-}
+};
 
 startApplication();
