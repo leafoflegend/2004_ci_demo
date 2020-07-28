@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server/index.js",
     "build": "webpack --mode=\"production\"",
-    "lint": "eslint server client",
+    "lint": "eslint --ext .js,.jsx server client",
     "test": "jest"
   },
   "keywords": [],
