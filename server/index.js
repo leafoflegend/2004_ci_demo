@@ -31,7 +31,7 @@ const sync = async () => {
 
     throw e;
   }
-}
+};
 
 app.use(express.static(PUBLIC_PATH));
 app.use(express.static(DIST_PATH));
@@ -55,6 +55,6 @@ const startApplication = async () => {
 
     throw e;
   }
-}
+};
 
 startApplication();
