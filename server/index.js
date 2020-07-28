@@ -36,6 +36,12 @@ const sync = async () => {
 app.use(express.static(PUBLIC_PATH));
 app.use(express.static(DIST_PATH));
 
+app.get('/api/health', (req, res) => {
+  res.send({
+    message: 'I am a healthy little server.',
+  });
+});
+
 const startApplication = async () => {
   try {
     console.log(chalk.cyan('Application starting...'));
